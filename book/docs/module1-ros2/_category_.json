@@ -1,0 +1,8 @@
+{
+  "label": "Module 1: The Robotic Nervous System (ROS 2)",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn how to build the foundational communication layer for your humanoid robot using ROS 2."
+  }
+}

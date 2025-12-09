@@ -1,0 +1,6 @@
+# This file contains the Python dependencies for the labs.
+
+pytest
+torch
+tensorflow
+opencv-python

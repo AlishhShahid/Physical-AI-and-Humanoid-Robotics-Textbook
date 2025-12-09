@@ -1,0 +1,42 @@
+# Sensor configuration for the humanoid robot digital twin
+
+humanoid_robot:
+  # IMU sensor configuration
+  imu:
+    topic: /humanoid_robot/imu/data
+    frame_id: base_link
+    update_rate: 100
+    gaussian_noise: 0.0017
+
+  # Joint state configuration
+  joint_state:
+    topic: /humanoid_robot/joint_states
+    update_rate: 50
+
+  # Joint encoder configuration (simulated)
+  joint_encoders:
+    joints:
+      - left_hip_joint
+      - left_knee_joint
+      - left_ankle_joint
+      - right_hip_joint
+      - right_knee_joint
+      - right_ankle_joint
+      - left_shoulder_joint
+      - left_elbow_joint
+      - right_shoulder_joint
+      - right_elbow_joint
+    topic: /humanoid_robot/joint_encoders
+    update_rate: 100
+    resolution: 0.001  # 1 milliradian resolution
+
+# Additional sensor parameters
+sensor_parameters:
+  imu_bias:
+    acceleration_bias: 0.01  # m/s^2
+    gyroscope_bias: 0.001    # rad/s
+
+  encoder_resolution:
+    position: 0.001  # radians
+    velocity: 0.01   # rad/s
+    effort: 0.1      # Nm

@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bash:*)",
+      "Bash(git fetch:*)",
+      "Bash(ls:*)",
+      "Bash(.specify/scripts/powershell/create-new-feature.ps1:*)",
+      "Bash(git checkout:*)",
+      "Bash(.specify/scripts/powershell/check-prerequisites.ps1:*)",
+      "Bash(.specify/scripts/powershell/setup-plan.ps1:*)",
+      "Bash(python -m venv:*)",
+      "Bash(powershell.exe:*)",
+      "Bash(__NEW_LINE__ .specify/scripts/bash/create-phr.sh --title \"Failed to implement feature - missing spec\" --stage general --json)",
+      "Bash(claude /logout)",
+      "SlashCommand(/sp.analyze)",
+      "Bash(mkdir -p history/prompts/general)",
+      "Bash(git rev-parse --git-dir)",
+      "Bash(dir \"C:\\Alishh-Work\\giaic-quarter-four\\humanoid-robotics-textbook\\my-humanoid-book\\docs\")",
+      "Bash(dir \"C:\\Alishh-Work\\giaic-quarter-four\\humanoid-robotics-textbook\\my-humanoid-book\\docs\\module1-ros2\")",
+      "Bash(dir \"C:\\Alishh-Work\\giaic-quarter-four\\humanoid-robotics-textbook\\my-humanoid-book\\docs\\module1-ros2\" /s)",
+      "Bash(powershell \"Get-ChildItem -Path ''C:\\Alishh-Work\\giaic-quarter-four\\humanoid-robotics-textbook\\my-humanoid-book\\docs\\module1-ros2'' -Recurse\")",
+      "Bash(powershell \"Get-ChildItem -Path ''C:\\Alishh-robotics-textbook\\my-humanoid-book\\docs'' -Recurse\")",
+      "Bash(powershell \"Get-ChildItem -Path ''C:\\Alishh-Work\\giaic-quarter-four\\humanoid-robotics-textbook\\my-humanoid-book\\docs'' -Recurse\")",
+      "Bash(dir \"C:\\Alishh-Work\\giaic-quarter-four\\humanoid-robotics-textbook\\my-humanoid-book\\docs\\module3-isaac-brain\")",
+      "Bash(dir:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "label": "Module 2: The Digital Twin (Gazebo & Unity)",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn how to build and simulate a digital twin of your humanoid robot using Gazebo and Unity for safe testing and validation."
+  }
+}

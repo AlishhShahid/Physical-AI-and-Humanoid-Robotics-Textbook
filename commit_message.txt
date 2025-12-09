@@ -1,0 +1,19 @@
+feat: Implement polish and finalization tasks
+
+This commit includes the following changes:
+
+- **Content:**
+  - Added content for weeks 1, 2, and 3 of Module 1.
+  - Added "Challenges and Extensions" sections to all modules.
+  - Created a capstone project page.
+- **Configuration:**
+  - Added a `requirements.txt` file for Python dependencies.
+  - Updated `sidebars.js` to include the new content.
+- **Deployment:**
+  - Added a Jetson deployment example for Module 1.
+- **Testing:**
+  - Added test runner scripts for all lab modules.
+- **Fixes:**
+  - Patched the `common.ps1` script to correctly identify the feature directory.
+- **Documentation:**
+  - Created a PHR for the implementation.

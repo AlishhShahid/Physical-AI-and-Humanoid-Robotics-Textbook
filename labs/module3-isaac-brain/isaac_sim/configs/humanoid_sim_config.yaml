@@ -1,0 +1,100 @@
+# Isaac Sim Configuration for Humanoid Robot
+
+# Physics settings
+physics:
+  gravity: [0.0, 0.0, -9.81]  # Gravity vector (m/s^2)
+  solver:
+    type: "TGS"               # Solver type (TGS or PGSP)
+    iterations: 4             # Number of solver iterations
+    substeps: 1               # Number of substeps per frame
+  timestep: 0.008333          # Physics timestep (seconds, 120 Hz)
+
+# Rendering settings
+rendering:
+  resolution: [1280, 720]     # Render resolution (width, height)
+  fps: 60                     # Target frames per second
+  msaa_samples: 4            # Multisample anti-aliasing
+  max_render_secs: 0.01667    # Max time per render call (60 FPS)
+
+# Robot settings
+robot:
+  urdf_path: "../../../module2-digital-twin/gazebo_sim/models/humanoid_robot/model.urdf"
+  initial_position: [0.0, 0.0, 1.0]  # Initial position (m)
+  initial_orientation: [0.0, 0.0, 0.0, 1.0]  # Initial orientation (quaternion)
+  joint_damping: 0.01         # Joint damping coefficient
+  joint_friction: 0.0         # Joint friction coefficient
+
+# Environment settings
+environment:
+  scene: "indoor_office"      # Scene type
+  lighting:
+    intensity: 30000          # Light intensity (lumens)
+    temperature: 6500         # Color temperature (Kelvin)
+  ground_plane:
+    size: [10.0, 10.0]        # Ground plane size (m)
+    friction: [0.5, 0.5]      # Static and dynamic friction
+
+# Sensor configuration
+sensors:
+  rgb_camera:
+    enabled: true
+    position: [0.1, 0.0, 0.1]  # Position relative to head (m)
+    orientation: [0.0, 0.0, 0.0, 1.0]  # Orientation (quaternion)
+    resolution: [640, 480]
+    fov: 60                   # Field of view (degrees)
+    clipping_range: [0.1, 10.0]  # Near and far clipping (m)
+
+  depth_camera:
+    enabled: true
+    position: [0.1, 0.0, 0.1]  # Position relative to head (m)
+    resolution: [640, 480]
+    fov: 60
+    clipping_range: [0.1, 10.0]
+
+  lidar:
+    enabled: true
+    position: [0.0, 0.0, 0.5]  # Position relative to base (m)
+    rotation_frequency: 10     # Rotation frequency (Hz)
+    points_per_second: 500000  # Points per second
+    channels: 16               # Number of channels
+    range: [0.2, 25.0]         # Range (m)
+    upper_fov: 10.0           # Upper FOV (degrees)
+    lower_fov: -30.0          # Lower FOV (degrees)
+
+  imu:
+    enabled: true
+    position: [0.0, 0.0, 0.0]  # Position relative to base (m)
+    linear_acceleration_noise: 1.7e-2
+    angular_velocity_noise: 2e-4
+
+# Synthetic data settings
+synthetic_data:
+  domain_randomization:
+    enabled: true
+    texture_randomization: true
+    lighting_randomization: true
+    object_placement_randomization: true
+  data_generation:
+    rgb: true
+    depth: true
+    segmentation: true
+    bounding_boxes: true
+    poses: true
+  output_directory: "../outputs/synthetic_data"
+  format: "isaac_sim"         # Output format
+
+# ROS integration
+ros:
+  enabled: true
+  bridge_type: "ros2"         # ROS version
+  namespace: "/humanoid_robot"
+  publish_frequency: 30       # Joint state publish frequency (Hz)
+  tf_publish_frequency: 30    # TF publish frequency (Hz)
+
+# Simulation settings
+simulation:
+  headless: false             # Run without GUI
+  realtime: false             # Run in real-time or as fast as possible
+  max_steps: 0                # Maximum simulation steps (0 = unlimited)
+  record_video: false         # Record simulation video
+  video_directory: "../outputs/videos"
