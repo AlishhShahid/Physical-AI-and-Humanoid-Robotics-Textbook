@@ -8,25 +8,25 @@ const FeatureList = [
     module: 'Module 1',
     title: 'The Robotic Nervous System (ROS 2)',
     description: "Build the robot's control & communication system with ROS 2.",
-    link: '/humanoid-robotics-book/docs/intro',
+    link: '/docs/intro',
   },
   {
     module: 'Module 2',
     title: 'The Digital Twin (Gazebo & Unity)',
     description: 'Create a digital twin of a humanoid robot for safe simulation and testing.',
-    link: '/humanoid-robotics-book/docs/intro',
+    link: '/docs/intro',
   },
   {
     module: 'Module 3',
     title: 'The AI Brain (NVIDIA Isaac)',
     description: 'Use NVIDIA Isaac for SLAM, navigation, and robot perception.',
-    link: '/humanoid-robotics-book/docs/intro',
+    link: '/docs/intro',
   },
   {
     module: 'Module 4',
     title: 'Vision-Language-Action Robotics (VLA)',
     description: 'Control robots via natural language with VLA.',
-    link: '/humanoid-robotics-book/docs/intro',
+    link: '/docs/intro',
   },
 ];
 
